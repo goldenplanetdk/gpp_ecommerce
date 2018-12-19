@@ -3,14 +3,14 @@
         <product>
             <productname>{{ product.title }}</productname>
             <brandname>{{ product.brand }}</brandname>
-            <MPN>{{ product.model }}</MPN>
-            <EAN>{{ product.ean }}</EAN>
+            <MPN>{{ product.mpn }}</MPN>
+            <EAN>{{ product.gtin }}</EAN>
             <stock>{{ product.quantity }}</stock>
-            <price>{{ product.price_with_tax }}</price>
+            <price>{{ product.price.value }}</price>
             <category_name>{{ product.category }}</category_name>
             <your_product_ID>{{ product.id }}</your_product_ID>
-            <image_URL>{{ product.image ? absolute_url(product.image) : '' }}</image_URL>
-            <product_URL>{{ absolute_url(product.url) }}</product_URL>
+            <image_URL>{{ product.image_link }}</image_URL>
+            <product_URL>{{ product.link  }}</product_URL>
         </product>
     {% endfor %}
 </productfeed>
