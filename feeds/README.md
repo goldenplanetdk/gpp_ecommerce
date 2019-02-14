@@ -4,7 +4,7 @@ Template supports Twig syntax and all its filters and functions. You can read mo
 
 List of supported product properties:
 
-id, article_id, title, gtin, link, mpn, description, image_link, brand, weight, price, sale_price, availability, adult, condition, category, category_path, google_product_category
+id, article_id, title, gtin, link, mpn, description, image_link, brand, weight, price, sale_price, availability, adult, condition, category, category_path, google_product_category, extra
 
 ## Some useful constructions:
 
@@ -14,7 +14,21 @@ Custom stock text
 ````
 
 Price with currency
-
 ````
 {{ product.price | formatCurrency }}
+````
+
+Extra tab content assigned to tab title with ID:1
+````
+{{ product.extra.1 }}
+````
+
+Render html text without encoding to special chars
+````
+{{ product.extra.1 | raw }}
+````
+
+Remove html tags
+````
+{{ product.extra.1 | striptags }}
 ````
