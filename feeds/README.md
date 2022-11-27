@@ -4,7 +4,7 @@ Template supports Twig syntax and all its filters and functions. You can read mo
 
 List of supported product properties:
 
-id, article_id, title, gtin, link, mpn, description, image_link, brand, weight, price, sale_price, availability, adult, condition, category, category_path, google_product_category, extra
+id, article_id, title, gtin, link, mpn, description, primary_image_link, image_link, brand, weight, price, sale_price, availability, adult, condition, category, category_path, google_product_category, extra
 
 ## Some useful constructions:
 
