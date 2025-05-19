@@ -32,3 +32,9 @@ Remove html tags
 ````
 {{ product.extra.1 | striptags }}
 ````
+
+Features (product-level attributes)
+```
+{{ product.features|map(f => "#{f.attribute}: #{f.value}")|join(', ') }}
+```
+will output Color: Black, Material: Cotton
