@@ -36,5 +36,8 @@ Remove html tags
 Features (product-level attributes)
 ```
 {{ product.features|map(f => "#{f.attribute}: #{f.value}")|join(', ') }}
+# will output Color: Black, Material: Cotton
+{{ product.features|filter(f => f.id in [2,3])|map(f => "#{f.attribute}: #{f.value}")|join(', ') }}
+# will output only attributes with id 2 and 3
 ```
-will output Color: Black, Material: Cotton
+
