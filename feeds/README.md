@@ -41,3 +41,9 @@ Features (product-level attributes)
 # will output only attributes with id 2 and 3
 ```
 
+Meta (product-level attributes)
+```
+{{ product.meta.gpp.secret }}
+# will output value of key "secret" of group/namespace "gpp"
+```
+
